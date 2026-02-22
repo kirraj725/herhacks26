@@ -14,7 +14,7 @@ class Settings:
 
     # CORS
     CORS_ORIGINS: list[str] = os.getenv(
-        "CORS_ORIGINS", "http://localhost:5173"
+        "CORS_ORIGINS", "*"
     ).split(",")
 
     # Database

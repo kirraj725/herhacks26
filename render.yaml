@@ -13,6 +13,8 @@ services:
         value: 8000
       - key: PYTHON_VERSION
         value: 3.10.12
+      - key: CORS_ORIGINS
+        value: "*"
 
   # Frontend Static Site (Defined as a web service with static runtime)
   - type: web
@@ -20,10 +22,10 @@ services:
     runtime: static
     buildCommand: cd frontend && npm install && npm run build
     staticPublishPath: frontend/dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://valentis-api.onrender.com/api # Direct absolute URL
     routes:
-      - type: rewrite
-        source: /api/*
-        destination: https://valentis-api.onrender.com/api/*
       - type: rewrite
         source: /*
         destination: /index.html
