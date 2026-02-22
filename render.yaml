@@ -13,7 +13,6 @@ services:
   # Frontend Static Site
   - type: static_site
     name: valentis
-    env: static
     buildCommand: cd frontend && npm install && npm run build
     publishPath: ./frontend/dist
     headers:
