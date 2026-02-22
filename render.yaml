@@ -11,6 +11,8 @@ services:
     envVars:
       - key: PORT
         value: 8000
+      - key: PYTHON_VERSION
+        value: 3.10.12
 
   # Frontend Static Site (Defined as a web service with static runtime)
   - type: web
