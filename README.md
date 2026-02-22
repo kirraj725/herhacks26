@@ -1,8 +1,8 @@
-# ClearCollect AI
+# Valentis
 
 **Hospital Revenue & Payment Risk Intelligence Platform**
 
-ClearCollect AI is a predictive revenue intelligence and fraud detection layer that helps hospitals proactively protect revenue, detect suspicious financial activity, and optimize collections before accounts reach bad debt.
+Valentis is a predictive revenue intelligence and fraud detection layer that helps hospitals proactively protect revenue, detect suspicious financial activity, and optimize collections before accounts reach bad debt.
 
 ## Tech Stack
 
