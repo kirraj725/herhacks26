@@ -11,7 +11,7 @@ services:
         value: 8000
 
   # Frontend Static Site
-  - type: static
+  - type: static_site
     name: valentis
     env: static
     buildCommand: cd frontend && npm install && npm run build
