@@ -1,0 +1,11 @@
+account_id,patient_balance,total_charges,insurance_paid,historical_late_payments_12m,days_past_due,service_category,payer_type,deductible_remaining_est
+ACC001,1200.50,5000.00,3500.00,0,0,cardiology,commercial,250.00
+ACC002,3400.00,8000.00,4000.00,3,45,orthopedic,medicare,0.00
+ACC003,800.00,3200.00,2400.00,1,15,radiology,medicaid,100.00
+ACC004,5600.00,12000.00,5000.00,5,90,emergency,self_pay,0.00
+ACC005,200.00,1500.00,1200.00,0,0,primary_care,commercial,50.00
+ACC006,4100.00,9500.00,4800.00,4,60,surgery,commercial,500.00
+ACC007,950.00,2800.00,1600.00,2,30,neurology,medicare,0.00
+ACC008,6800.00,15000.00,7000.00,6,120,oncology,self_pay,0.00
+ACC009,450.00,2000.00,1400.00,0,5,dermatology,commercial,75.00
+ACC010,3200.00,7500.00,3800.00,3,50,cardiology,medicaid,200.00

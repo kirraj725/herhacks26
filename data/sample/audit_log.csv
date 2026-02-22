@@ -1,0 +1,13 @@
+log_id,user_id,action,resource,timestamp
+LOG001,USR001,view,accounts_dashboard,2025-01-15T09:00:00Z
+LOG002,USR002,export,risk_scores_csv,2025-01-15T10:30:00Z
+LOG003,USR001,view,fraud_alerts,2025-01-15T11:00:00Z
+LOG004,USR003,approve_refund,REF001,2025-02-10T14:00:00Z
+LOG005,USR001,view,account_ACC004,2025-02-15T09:15:00Z
+LOG006,USR002,export,fraud_report_csv,2025-02-20T16:00:00Z
+LOG007,USR003,approve_refund,REF003,2025-03-01T10:00:00Z
+LOG008,USR001,view,revenue_forecast,2025-03-05T08:45:00Z
+LOG009,USR004,view,accounts_dashboard,2025-03-10T09:00:00Z
+LOG010,USR004,view,accounts_dashboard,2025-03-10T09:01:00Z
+LOG011,USR004,view,accounts_dashboard,2025-03-10T09:02:00Z
+LOG012,USR004,export,all_accounts_csv,2025-03-10T09:03:00Z

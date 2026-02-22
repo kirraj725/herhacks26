@@ -1,0 +1,1 @@
+# ClearCollect AI — Backend Application

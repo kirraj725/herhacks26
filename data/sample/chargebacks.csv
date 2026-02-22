@@ -1,0 +1,4 @@
+transaction_id,account_id,amount,chargeback_date,reason
+CB001,ACC004,150.00,2025-02-25,unauthorized
+CB002,ACC008,250.00,2025-03-22,service_not_received
+CB003,ACC004,150.00,2025-03-28,duplicate_charge

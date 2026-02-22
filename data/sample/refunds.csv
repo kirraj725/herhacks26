@@ -1,0 +1,6 @@
+transaction_id,account_id,refund_amount,refund_date,reason
+REF001,ACC002,200.00,2025-02-10,duplicate_payment
+REF002,ACC004,150.00,2025-02-20,billing_error
+REF003,ACC002,200.00,2025-03-01,duplicate_payment
+REF004,ACC006,500.00,2025-03-12,insurance_adjustment
+REF005,ACC008,250.00,2025-03-20,patient_request
