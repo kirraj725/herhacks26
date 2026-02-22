@@ -42,7 +42,7 @@ export default function Login() {
                             type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            placeholder="admin@hospital.org"
+                            placeholder="auditor@hospital.org"
                             required
                             autoFocus
                         />
@@ -70,7 +70,7 @@ export default function Login() {
                 <div className="auth-card__footer">
                     <p>Demo Credentials</p>
                     <div className="auth-demo-creds">
-                        <code>admin@hospital.org / ClearCollect2024!</code>
+                        <code>auditor@hospital.org / Auditor2024!</code>
                     </div>
                 </div>
             </div>
