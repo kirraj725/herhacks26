@@ -1,34 +1,23 @@
+version: 1
 services:
-  # Backend Web Service
   - type: web
-    name: valentis-backend
+    name: valentis-api
     env: python
     buildCommand: pip install -r backend/requirements.txt
     startCommand: cd backend && gunicorn -w 4 -k uvicorn.workers.UvicornWorker app.main:app --bind 0.0.0.0:$PORT
-    healthCheckPath: /health # Matches main.py endpoint
+    healthCheckPath: /health
     envVars:
       - key: PORT
         value: 8000
 
-  # Frontend Static Site
   - type: static_site
-    name: valentis
+    name: valentis-web
     buildCommand: cd frontend && npm install && npm run build
-    publishPath: ./frontend/dist
-    headers:
-      - path: /*
-        name: Cache-Control
-        value: no-cache
-    envVars:
-      - key: VITE_API_URL
-        fromService:
-          name: valentis-backend
-          type: web
-          property: host
+    publishPath: frontend/dist
     routes:
       - type: rewrite
         source: /api/*
-        destination: https://valentis-backend.onrender.com/api/* # Fallback proxy
+        destination: https://valentis-api.onrender.com/api/*
       - type: rewrite
         source: /*
         destination: /index.html
