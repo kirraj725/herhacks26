@@ -27,5 +27,23 @@ class Settings:
     # Gemini API (optional)
     GEMINI_API_KEY: str | None = os.getenv("GEMINI_API_KEY")
 
+    # Security
+    SECRET_KEY: str = os.getenv("SECRET_KEY", "")
+
+    # AI API Keys (optional)
+    OPENAI_API_KEY: str | None = os.getenv("OPENAI_API_KEY")
+    ANTHROPIC_API_KEY: str | None = os.getenv("ANTHROPIC_API_KEY")
+
+    # Environment
+    ENVIRONMENT: str = os.getenv("ENVIRONMENT", "development")
+
+    def validate(self):
+        required = ["DATABASE_URL", "SECRET_KEY"]
+        missing = [k for k in required if not getattr(self, k)]
+        if missing:
+            raise ValueError(f"Missing required env vars: {missing}")
+
 
 settings = Settings()
+if settings.ENVIRONMENT == "production":
+    settings.validate()

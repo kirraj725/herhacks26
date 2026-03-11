@@ -8,7 +8,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import settings
-from app.routers import upload, risk, fraud, anomaly, forecast, payment_plan, audit, auth
+from app.routers import upload, risk, fraud, anomaly, forecast, payment_plan, audit, auth, ingest
 
 app = FastAPI(
     title="ClearCollect AI",
@@ -34,6 +34,7 @@ app.include_router(anomaly.router, prefix="/api/anomaly", tags=["Anomaly Detecti
 app.include_router(forecast.router, prefix="/api/forecast", tags=["Revenue Forecast"])
 app.include_router(payment_plan.router, prefix="/api/plans", tags=["Payment Plans"])
 app.include_router(audit.router, prefix="/api/audit", tags=["Audit & Security"])
+app.include_router(ingest.router, prefix="/api/ingest", tags=["Data Ingestion"])
 
 
 @app.get("/")
