@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import FileUpload from '../components/FileUpload';
-import axios from 'axios';
+import api from '../services/api';
 
 export default function Upload() {
     const [uploading, setUploading] = useState(false);
@@ -13,7 +13,7 @@ export default function Upload() {
         try {
             const formData = new FormData();
             files.forEach((f) => formData.append('files', f));
-            const res = await axios.post('/api/upload', formData, {
+            const res = await api.post('/upload/', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
             setResult(res.data);
